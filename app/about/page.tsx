@@ -1,6 +1,7 @@
 // app/page.tsx
 
 import React from 'react';
+import Image from 'next/image';
 
 export default function HomePage() {
   return (
@@ -10,11 +11,12 @@ export default function HomePage() {
         <div className="flex flex-col md:flex-row items-center">
           {/* Left Column: Headshot Photo */}
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
-            {/* Replace the src with the path to your actual headshot image */}
-            <img
+            <Image
               src="/path-to-your-headshot.jpg"
               alt="Headshot"
-              className="w-full h-auto rounded-lg"
+              width={500} // Set an appropriate width
+              height={300} // Set an appropriate height
+              layout="responsive" // This makes the image responsive
             />
           </div>
           {/* Right Column: Text Content */}

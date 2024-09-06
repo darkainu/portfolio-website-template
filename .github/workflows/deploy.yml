@@ -16,6 +16,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: List directory contents
+        run: ls -la
+
       - name: Install and Build 🔧
         run: |
           npm ci

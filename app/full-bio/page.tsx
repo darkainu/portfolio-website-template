@@ -1,10 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-
-const baseUrl = process.env.NODE_ENV === 'production' 
-  ? 'https://github.com/darkainu/website' 
-  : '';
 
 export default function FullBioPage() {
   return (
@@ -13,7 +8,7 @@ export default function FullBioPage() {
         <div className="flex flex-col md:flex-row items-center mb-6">
           <div className="w-full md:w-1/2 mb-4 md:mb-0 md:mr-6 md:sticky md:top-6">
             <Image
-              src={`${baseUrl}/public/images/bio.jpg`}
+              src="/images/bio.jpg"
               alt="Murat Orhan"
               width={200}
               height={200}

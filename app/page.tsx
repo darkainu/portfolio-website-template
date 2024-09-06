@@ -62,11 +62,11 @@ export default function HomePage() {
                 View CV
               </a>
               <Link
-                href={`${baseUrl}/full-bio`}
-                className="bg-customBlue text-white px-4 py-2 rounded-md transition-all duration-300 hover:bg-blue-600 hover:shadow-lg active:scale-100 hover:scale-105 inline-block"
-              >
-                Full Bio
-              </Link>
+  href={`${baseUrl}/full-bio`}
+  className="bg-customBlue text-white px-4 py-2 rounded-md transition-all duration-300 hover:bg-blue-600 hover:shadow-lg active:scale-100 hover:scale-105 inline-block"
+>
+  Full Bio
+</Link>
               <a
                 href="https://www.linkedin.com/in/muratorhan/"
                 target="_blank"

@@ -3,6 +3,10 @@ import ScrollToTopButton from './components/ScrollToTopButton';
 import Image from 'next/image';
 import ContactForm from './components/ContactForm';
 
+const baseUrl = process.env.NODE_ENV === 'production' 
+  ? 'https://darkainu.github.io/website' 
+  : '';
+
 export default function HomePage() {
   return (
     <main className="flex flex-col items-center justify-start min-h-screen p-5 pt-20 bg-customYellow">
@@ -13,7 +17,7 @@ export default function HomePage() {
           {/* Left Column: Headshot Photo */}
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
             <Image
-              src="/images/profile.jpg"
+              src={`${baseUrl}/images/profile.jpg`}
               alt="Profile Photo"
               width={300}
               height={300}

@@ -13,7 +13,7 @@ export default function FullBioPage() {
         <div className="flex flex-col md:flex-row items-center mb-6">
           <div className="w-full md:w-1/2 mb-4 md:mb-0 md:mr-6 md:sticky md:top-6">
             <Image
-              src={`${baseUrl}/images/bio.jpg`}
+              src={`${baseUrl}/public/images/bio.jpg`}
               alt="Murat Orhan"
               width={200}
               height={200}

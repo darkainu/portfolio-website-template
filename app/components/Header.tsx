@@ -12,7 +12,7 @@ const Header: React.FC = () => {
       <div className="flex items-center">
         <Link href="/">
           <Image
-            src={`${baseUrl}/images/logo.png`}
+            src={`${baseUrl}/public/images/logo.png`}
             alt="Logo"
             width={150}
             height={50}

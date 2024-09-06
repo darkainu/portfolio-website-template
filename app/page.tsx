@@ -2,6 +2,7 @@ import React from 'react';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import Image from 'next/image';
 import ContactForm from './components/ContactForm';
+import Link from 'next/link';
 
 const baseUrl = process.env.NODE_ENV === 'production' 
   ? 'https://darkainu.github.io/website' 
@@ -60,12 +61,12 @@ export default function HomePage() {
               >
                 View CV
               </a>
-              <a
-                href="/full-bio"
+              <Link
+                href={`${baseUrl}/full-bio`}
                 className="bg-customBlue text-white px-4 py-2 rounded-md transition-all duration-300 hover:bg-blue-600 hover:shadow-lg active:scale-100 hover:scale-105 inline-block"
               >
                 Full Bio
-              </a>
+              </Link>
               <a
                 href="https://www.linkedin.com/in/muratorhan/"
                 target="_blank"

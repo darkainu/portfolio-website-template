@@ -1,10 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-const baseUrl = process.env.NODE_ENV === 'production' 
-  ? '/website' 
-  : '';
-
 export default function FullBioPage() {
   return (
     <main className="bg-customYellow min-h-screen py-10 px-4">

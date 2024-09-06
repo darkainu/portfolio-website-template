@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const baseUrl = process.env.NODE_ENV === 'production' 
-  ? 'https://darkainu.github.io/website' 
+  ? 'https://github.com/darkainu/website' 
   : '';
 
 export default function FullBioPage() {

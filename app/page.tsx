@@ -5,7 +5,7 @@ import ContactForm from './components/ContactForm';
 import Link from 'next/link';
 
 const baseUrl = process.env.NODE_ENV === 'production' 
-  ? 'https://darkainu.github.io/website' 
+  ? 'https://github.com/darkainu/website' 
   : '';
 
 export default function HomePage() {

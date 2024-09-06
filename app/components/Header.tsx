@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const baseUrl = process.env.NODE_ENV === 'production' 
-? 'https://darkainu.github.io/website' 
+? 'https://github.com/darkainu/website' 
 : '';
 
 const Header: React.FC = () => {

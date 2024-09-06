@@ -2,13 +2,17 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+const baseUrl = process.env.NODE_ENV === 'production' 
+? 'https://darkainu.github.io/website' 
+: '';
+
 const Header: React.FC = () => {
   return (
     <header className="font-sans flex justify-between items-center p-5 bg-gray-800 text-white fixed top-0 left-0 right-0 z-50">
       <div className="flex items-center">
         <Link href="/">
           <Image
-            src="/images/logo.png"
+            src={`${baseUrl}/images/logo.png`}
             alt="Logo"
             width={150}
             height={50}

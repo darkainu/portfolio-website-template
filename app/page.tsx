@@ -104,7 +104,7 @@ export default function HomePage() {
             <h3 className="text-lg font-semibold text-black mb-2">Welfare Abroad Website</h3>
             <div className="w-full h-32 mb-3 rounded-lg overflow-hidden">
               <Image
-                src="/images/welfareabroad.png"
+                src={`${baseUrl}/images/welfareabroad.png`}
                 alt="Welfare Abroad"
                 width={300}
                 height={300}

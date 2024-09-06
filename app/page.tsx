@@ -5,7 +5,7 @@ import ContactForm from './components/ContactForm';
 import Link from 'next/link';
 
 const baseUrl = process.env.NODE_ENV === 'production' 
-  ? 'https://github.com/darkainu/website' 
+  ? '/website' 
   : '';
 
 export default function HomePage() {
@@ -17,13 +17,13 @@ export default function HomePage() {
         <div className="flex flex-col md:flex-row items-center">
           {/* Left Column: Headshot Photo */}
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
-            <Image
-              src={`${baseUrl}/public/images/profile.jpg`}
-              alt="Profile Photo"
-              width={300}
-              height={300}
-              className="w-full h-auto rounded-lg"
-            />
+          <Image
+  src={`${baseUrl}/images/profile.jpg`}
+  alt="Profile Photo"
+  width={300}
+  height={300}
+  className="w-full h-auto rounded-lg"
+/>
           </div>
           {/* Right Column: Text Content */}
           <div className="w-full md:w-2/3 md:pl-6">

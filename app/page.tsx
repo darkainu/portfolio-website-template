@@ -54,7 +54,7 @@ export default function HomePage() {
                 Hire me
               </button>
               <a
-                href="/docs/resume.pdf"
+                href={`${baseUrl}/docs/resume.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-200 text-gray-800 px-4 py-2 rounded-md transition-all duration-300 hover:bg-gray-100 hover:shadow-lg active:scale-100 hover:scale-105 inline-block"

@@ -7,11 +7,19 @@ html {
 }
 
 /* Add a parallax scroll effect */
+.parallax-container {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 .parallax-layer {
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 /* Add a smooth scroll effect */
 html {
@@ -53,4 +61,15 @@ html {
 
 .main p {
   font-size: 1.2rem;
+}
+
+/* Add these new styles */
+.perspective-1 {
+  perspective: 1px;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+
+body {
+  overflow: hidden;
 }

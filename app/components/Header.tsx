@@ -7,16 +7,41 @@ const baseUrl = process.env.NODE_ENV === 'production' ? '/website' : '';
 const Header: React.FC = () => {
   const [activeSection, setActiveSection] = useState('');
 
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    const scrollContainer = document.querySelector('.overflow-y-auto');
+    const targetSection = document.getElementById(sectionId);
+    
+    if (scrollContainer && targetSection) {
+      scrollContainer.scrollTo({
+        top: targetSection.offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['about-me', 'projects', 'contact'];
-      const scrollPosition = window.scrollY + window.innerHeight / 2;
+      const scrollContainer = document.querySelector('.overflow-y-auto');
+      const scrollPosition = scrollContainer?.scrollTop || 0;
+      const containerHeight = scrollContainer?.clientHeight || 0;
+      const scrollHeight = scrollContainer?.scrollHeight || 0;
+
+      // Special handling for Contact section
+      if (scrollHeight - (scrollPosition + containerHeight) < 100) {
+        setActiveSection('contact');
+        return;
+      }
 
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
           const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+          if (
+            scrollPosition >= offsetTop - 100 && 
+            scrollPosition < offsetTop + offsetHeight - 100
+          ) {
             setActiveSection(section);
             break;
           }
@@ -24,8 +49,10 @@ const Header: React.FC = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const scrollContainer = document.querySelector('.overflow-y-auto');
+    scrollContainer?.addEventListener('scroll', handleScroll);
+    
+    return () => scrollContainer?.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -35,6 +62,7 @@ const Header: React.FC = () => {
           <li key={item}>
             <a
               href={`#${item.toLowerCase().replace(' ', '-')}`}
+              onClick={(e) => handleClick(e, item.toLowerCase().replace(' ', '-'))}
               className={`font-serif text-xl font-medium transition-all duration-300 ${
                 activeSection === item.toLowerCase().replace(' ', '-')
                 ? 'text-customGreen scale-110'

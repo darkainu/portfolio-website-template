@@ -1,32 +1,48 @@
-import React from "react";
+'use client'
+
+import React, { useEffect, useState, useRef } from "react";
 
 const ParallaxSection: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    
+    const handleScroll = (e: Event) => {
+      const target = e.target as HTMLDivElement;
+      setScrollPosition(target.scrollTop);
+    };
+
+    container?.addEventListener('scroll', handleScroll);
+    return () => container?.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="fixed inset-0 w-full h-full perspective-1">
-      {/* Background layer - Sky */}
+    <div ref={containerRef} className="relative min-h-screen overflow-y-auto h-screen">
       <div
-        className="fixed inset-0 w-full h-full bg-cover bg-center"
+        className="fixed inset-0 w-full h-[150vh] bg-cover bg-center"
         style={{
           backgroundImage: `url('/images/sky.webp')`,
-          transform: "translateZ(-1px) scale(2)",
-          zIndex: -1,
-        }}
-      />
-      
-      {/* Foreground layer - Dunes */}
-      <div
-        className="fixed inset-0 w-full h-full bg-cover bg-center"
-        style={{
-          backgroundImage: `url('/images/dunes.webp')`,
-          transform: "translateZ(0) scale(1.5)",
+          transform: `translateY(${scrollPosition * 0.5}px)`,
           zIndex: -2,
         }}
       />
       
-      {/* Content layer */}
-      <div className="absolute w-full h-full overflow-y-auto overflow-x-hidden">
+      <div
+        className="fixed inset-0 w-full h-[150vh] bg-cover bg-bottom"
+        style={{
+          backgroundImage: `url('/images/dunes.webp')`,
+          transform: `translateY(${scrollPosition * 0.3}px)`,
+          zIndex: -1,
+        }}
+      />
+      
+      <div className="relative z-10">
         {children}
       </div>
     </div>
   );
-};export default ParallaxSection;
+};
+
+export default ParallaxSection;

@@ -1,7 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add a parallax scroll effect */
+.parallax-layer {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+/* Add a smooth scroll effect */
 html {
   scroll-behavior: smooth;
 }

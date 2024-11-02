@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function HomePage() {
   return (
-    <main className="flex flex-col items-center justify-start min-h-screen p-5 bg-customYellow">
+    <main className="flex flex-col items-center justify-start min-h-screen p-5">
       {/* About Me Section */}
       <section className="bg-customBlue w-full max-w-4xl mx-auto p-6 rounded-lg shadow-lg mt-10">
         <div className="flex flex-col md:flex-row items-center">

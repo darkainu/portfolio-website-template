@@ -15,6 +15,9 @@ module.exports = {
         customLightGray: '#F5F5F5',
         'customLightBlue': '#3B82F6', // This is equivalent to blue-500 in Tailwind
       },
+      backgroundPosition: {
+        'center-center': 'center center',
+      },
       fontFamily: {
         sans: ['Montserrat', 'Poppins', 'sans-serif'],
         serif: ['Lora', 'serif'],

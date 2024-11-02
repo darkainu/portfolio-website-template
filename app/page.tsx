@@ -3,6 +3,7 @@ import ScrollToTopButton from './components/ScrollToTopButton';
 import Image from 'next/image';
 import ContactForm from './components/ContactForm';
 import Link from 'next/link';
+import ParallaxSection from './components/ParallaxSection';
 
 const baseUrl = process.env.NODE_ENV === 'production' 
   ? '/website' 
@@ -11,9 +12,10 @@ const baseUrl = process.env.NODE_ENV === 'production'
 export default function HomePage() {
   return (
     <main className="flex flex-col items-center justify-start min-h-screen p-5 pt-20 bg-customYellow">
+      <ParallaxSection />
       
       {/* About Us Section */}
-      <section id="about-us" className="font-body bg-sky-600 w-full max-w-4xl mx-auto p-6 rounded-lg shadow-lg mt-10">
+      <section id="about-me" className="font-body bg-sky-600 w-full max-w-4xl mx-auto p-6 rounded-lg shadow-lg mt-10">
         <div className="flex flex-col md:flex-row items-center">
           {/* Left Column: Headshot Photo */}
           <div className="w-full md:w-1/3 mb-6 md:mb-0">

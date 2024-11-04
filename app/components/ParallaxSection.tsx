@@ -30,12 +30,11 @@ const ParallaxSection: React.FC<{ children: React.ReactNode }> = ({ children }) 
     };
   }, []);
 
-  const scrollPercentage = Math.min(1, Math.max(0, scrollPosition / windowHeight));
+  const scrollPercentage = windowHeight ? Math.min(1, Math.max(0, scrollPosition / windowHeight)) : 0;
   const skyOpacity = Math.max(0, Math.min(1, 1 - scrollPercentage));
   const treesOpacity = Math.max(0, Math.min(1, scrollPercentage));
 
-  return (
-    <div ref={containerRef} className="relative min-h-screen overflow-y-auto h-screen">
+  return (    <div ref={containerRef} className="relative min-h-screen overflow-y-auto h-screen">
       <div
         className="fixed inset-0 w-full h-full transition-all duration-500"
         style={{

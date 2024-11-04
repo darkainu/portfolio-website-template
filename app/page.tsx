@@ -22,7 +22,7 @@ const baseUrl = process.env.NODE_ENV === 'production'
               <div className="w-full md:w-1/3 mb-6 md:mb-0">
                 <div className="relative group">
                   <Image
-                    src={`${baseUrl}public/images/bio.jpg`}
+                    src={`${baseUrl}/images/bio.webp`}
                     alt="Profile Photo"
                     width={300}
                     height={300}
@@ -113,7 +113,7 @@ const baseUrl = process.env.NODE_ENV === 'production'
         <h3 className="text-xl font-semibold text-white mb-3">Welfare Abroad Website</h3>
         <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden">
           <Image
-            src={`${baseUrl}public/images/welfareabroad.png`}
+            src={`${baseUrl}/images/welfareabroad.webp`}
             alt="Welfare Abroad"
             width={300}
             height={300}

@@ -34,37 +34,52 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-8">
-      <input
-        type="text"
-        name="name"
-        value={formData.name}
-        onChange={handleChange}
-        placeholder="Your Name"
-        required
-        className="w-full px-3 py-2 mb-4 border rounded-md"
-      />
-      <input
-        type="email"
-        name="email"
-        value={formData.email}
-        onChange={handleChange}
-        placeholder="Your Email"
-        required
-        className="w-full px-3 py-2 mb-4 border rounded-md"
-      />
-      <textarea
-        name="message"
-        value={formData.message}
-        onChange={handleChange}
-        placeholder="Your Message"
-        required
-        className="w-full px-3 py-2 mb-4 border rounded-md"
-        rows={4}
-      ></textarea>
+    <form onSubmit={handleSubmit} className="space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Name Input */}
+        <div className="relative">
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-3 bg-white/70 backdrop-blur-sm border border-gray-200/50 rounded-lg focus:ring-2 focus:ring-customBlue/50 focus:border-transparent transition-all duration-300"
+            placeholder="Your Name"
+          />
+        </div>
+
+        {/* Email Input */}
+        <div className="relative">
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-3 bg-white/70 backdrop-blur-sm border border-gray-200/50 rounded-lg focus:ring-2 focus:ring-customBlue/50 focus:border-transparent transition-all duration-300"
+            placeholder="Your Email"
+          />
+        </div>
+      </div>
+
+      {/* Message Input */}
+      <div className="relative">
+        <textarea
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          required
+          rows={5}
+          className="w-full px-4 py-3 bg-white/70 backdrop-blur-sm border border-gray-200/50 rounded-lg focus:ring-2 focus:ring-customBlue/50 focus:border-transparent transition-all duration-300 resize-none"
+          placeholder="Your Message"
+        ></textarea>
+      </div>
+
+      {/* Submit Button */}
       <button
         type="submit"
-        className="w-full px-4 py-2 text-white bg-customGreen rounded-md hover:bg-green-600"
+        className="w-full md:w-auto px-8 py-3 bg-gradient-to-r from-customGreen to-green-500 text-white rounded-lg shadow-lg hover:shadow-xl hover:scale-102 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-customGreen/50"
       >
         Send Message
       </button>

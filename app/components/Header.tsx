@@ -1,34 +1,19 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const baseUrl = process.env.NODE_ENV === 'production' ? '/website' : '';
-
 const Header: React.FC = () => {
-  const [activeSection, setActiveSection] = useState('');
-
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
-    e.preventDefault();
-    const scrollContainer = document.querySelector('.overflow-y-auto');
-    const targetSection = document.getElementById(sectionId);
-    
-    if (scrollContainer && targetSection) {
-      scrollContainer.scrollTo({
-        top: targetSection.offsetTop,
-        behavior: 'smooth'
-      });
-    }
-  };
+  const [activeSection, setActiveSection] = useState<string>('');
+  
+  const sections = useMemo(() => ['about-me', 'projects', 'contact'], []);
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['about-me', 'projects', 'contact'];
       const scrollContainer = document.querySelector('.overflow-y-auto');
       const scrollPosition = scrollContainer?.scrollTop || 0;
       const containerHeight = scrollContainer?.clientHeight || 0;
       const scrollHeight = scrollContainer?.scrollHeight || 0;
 
-      // Special handling for Contact section
       if (scrollHeight - (scrollPosition + containerHeight) < 100) {
         setActiveSection('contact');
         return;
@@ -53,7 +38,19 @@ const Header: React.FC = () => {
     scrollContainer?.addEventListener('scroll', handleScroll);
     
     return () => scrollContainer?.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [sections]);
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    const scrollContainer = document.querySelector('.overflow-y-auto');
+    const targetSection = document.getElementById(sectionId);
+    
+    if (scrollContainer && targetSection) {
+      scrollContainer.scrollTo({
+        top: targetSection.offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   return (
     <nav className="hidden md:block fixed left-8 bottom-20 z-50">
@@ -63,11 +60,16 @@ const Header: React.FC = () => {
             <a
               href={`#${item.toLowerCase().replace(' ', '-')}`}
               onClick={(e) => handleClick(e, item.toLowerCase().replace(' ', '-'))}
-              className={`font-serif text-xl font-medium transition-all duration-300 ${
-                activeSection === item.toLowerCase().replace(' ', '-')
-                ? 'text-customGreen scale-110'
-                : 'text-gray-600 hover:text-gray-800'
-              }`}
+              className={`
+                relative px-4 py-2 rounded-lg
+                ${activeSection === item.toLowerCase().replace(' ', '-')
+                  ? 'bg-white/20 text-white font-semibold backdrop-blur-sm'
+                  : 'text-white/80 hover:text-white hover:bg-white/10'}
+                transition-all duration-300
+                flex items-center gap-2
+                shadow-lg
+                border border-white/20
+              `}
             >
               {item}
             </a>
@@ -77,4 +79,5 @@ const Header: React.FC = () => {
     </nav>
   );
 };
+
 export default Header;

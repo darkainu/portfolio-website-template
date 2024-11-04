@@ -1,5 +1,5 @@
-import ParallaxSection from '../components/ParallaxSection';
-import Link from 'next/link';
+import ParallaxSection from '@/components/ParallaxSection'
+;import Link from 'next/link';
 import Image from 'next/image';
 
 const baseUrl = process.env.NODE_ENV === 'production' 

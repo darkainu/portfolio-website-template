@@ -22,7 +22,7 @@ const baseUrl = process.env.NODE_ENV === 'production'
               <div className="w-full md:w-1/3 mb-6 md:mb-0">
                 <div className="relative group">
                   <Image
-                    src={`${baseUrl}/images/profile.jpg`}
+                    src="/images/profile.jpg"
                     alt="Profile Photo"
                     width={300}
                     height={300}

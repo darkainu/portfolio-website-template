@@ -60,19 +60,20 @@ export default function FullBio() {
               <h2 className="text-2xl font-bold text-customBlue mt-8 mb-4 border-b-2 border-customBlue/20 pb-2">
                 Beyond Work
               </h2>
-
               <div className="bg-white/50 backdrop-blur-sm p-6 rounded-lg shadow-md">
-                <p>
-                  On a personal note, I have always found joy in activities that encourage creativity and strategic thinking. I grew up playing role-playing games and have a deep love for sandbox-style video games, where you can build and shape worlds as you wish—mirroring the problem-solving skills I bring to my professional life. I also have a passion for street basketball, having participated in local tournaments in my earlier years, and I maintain my love for physical activity through long walks, biking, frisbee golf, and traveling.
-                </p>
+                <div className="space-y-8">
+                  <p>
+                    On a personal note, I have always found joy in activities that encourage creativity and strategic thinking. I grew up playing role-playing games and have a deep love for sandbox-style video games, where you can build and shape worlds as you wish—mirroring the problem-solving skills I bring to my professional life. I also have a passion for street basketball, having participated in local tournaments in my earlier years, and I maintain my love for physical activity through long walks, biking, frisbee golf, and traveling.
+                  </p>
 
-                <p>
-                  Music has been a major influence in my life, and in the early 2000s, I enjoyed DJing for a discussion board using Winamp plugins. These days, I still find myself deeply connected to music and often explore new genres while relaxing or working. I also love to read comics and spend time with my family, especially with my daughter, who constantly reminds me of the importance of curiosity and playfulness in life.
-                </p>
+                  <p>
+                    Music has been a major influence in my life, and in the early 2000s, I enjoyed DJing for a discussion board using Winamp plugins. These days, I still find myself deeply connected to music and often explore new genres while relaxing or working. I also love to read comics and spend time with my family, especially with my daughter, who constantly reminds me of the importance of curiosity and playfulness in life.
+                  </p>
 
-                <p>
-                  If you&apos;re interested in learning more about my work, my passions, or discussing potential collaborations, feel free to connect with me or explore my site further. I&apos;m always open to conversations and opportunities that blend creativity, technology, and business.
-                </p>
+                  <p>
+                    If you&apos;re interested in learning more about my work, my passions, or discussing potential collaborations, feel free to connect with me or explore my site further. I&apos;m always open to conversations and opportunities that blend creativity, technology, and business.
+                  </p>
+                </div>
               </div>
             </div>
 

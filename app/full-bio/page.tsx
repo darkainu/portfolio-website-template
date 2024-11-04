@@ -17,7 +17,7 @@ export default function FullBio() {
               <div className="w-full md:w-1/2 mb-4 md:mb-0 md:mr-6">
                 <div className="relative group">
                   <Image
-                    src={`${baseUrl}/images/bio.jpg`}
+                    src={`${baseUrl}public/images/bio.jpg`}
                     alt="Murat Orhan"
                     width={200}
                     height={200}

@@ -31,8 +31,8 @@ const ParallaxSection: React.FC<{ children: React.ReactNode }> = ({ children }) 
   }, []);
 
   const scrollPercentage = Math.min(1, Math.max(0, scrollPosition / windowHeight));
-  const skyOpacity = Math.max(0, 1 - scrollPercentage);
-  const treesOpacity = Math.min(1, scrollPercentage);
+  const skyOpacity = Math.max(0, Math.min(1, 1 - scrollPercentage));
+  const treesOpacity = Math.max(0, Math.min(1, scrollPercentage));
 
   return (
     <div ref={containerRef} className="relative min-h-screen overflow-y-auto h-screen">
@@ -48,17 +48,18 @@ const ParallaxSection: React.FC<{ children: React.ReactNode }> = ({ children }) 
           backgroundRepeat: 'no-repeat'
         }}
       />
-      
       <div
         className="fixed inset-0 w-full h-full transition-all duration-500"
         style={{
           backgroundImage: `url('/images/sky.webp')`,
           opacity: treesOpacity,
-          transform: `translateY(${scrollPosition * 0.05}px)`, // Slightly faster movement
+          transform: `translateY(${scrollPosition * 0.05}px)`,
           zIndex: -1,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundPosition: 'center center',
+          backgroundRepeat: 'no-repeat',
+          height: '120vh', // Adding extra height
+          top: '-10vh'     // Positioning slightly higher
         }}
       />
       

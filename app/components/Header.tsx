@@ -53,7 +53,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <nav className="hidden md:block fixed left-8 bottom-20 z-50">
+    <nav className="hidden md:block fixed left-8 bottom-20 z-50 xl:left-12 2xl:left-16">
       <ul className="flex flex-col space-y-6">
         {['About Me', 'Projects', 'Contact'].map((item) => (
           <li key={item}>

@@ -14,7 +14,7 @@ const baseUrl = process.env.NODE_ENV === 'production'
     return (
       <ParallaxSection>
         <MobileMenu />
-        <main className="flex flex-col items-center justify-start min-h-screen p-5 pt-20">
+        <main className="flex flex-col items-center justify-start min-h-screen p-5 pt-20 md:ml-32 xl:ml-40">
           {/* About Me Section */}
           <section id="about-me" className="font-body bg-gradient-to-br from-sky-600/80 to-blue-800/80 backdrop-blur-sm w-full max-w-4xl mx-auto p-8 rounded-xl shadow-2xl mt-10">
             <div className="flex flex-col md:flex-row items-center gap-8">
@@ -165,8 +165,16 @@ const baseUrl = process.env.NODE_ENV === 'production'
       </div>
     </div>
   </section>
-          <ScrollToTopButton />
-        </main>
-      </ParallaxSection>
-    );
-  }
+  <Image
+    src={`${baseUrl}/images/profile.jpg`}
+    alt="Profile Photo"
+    width={300}
+    height={300}
+    priority
+    className="w-full h-auto rounded-xl shadow-lg transform transition-all duration-300 group-hover:scale-105"
+  />
+  <ScrollToTopButton />
+</main>
+</ParallaxSection>
+);
+}

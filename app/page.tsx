@@ -165,14 +165,6 @@ const baseUrl = process.env.NODE_ENV === 'production'
       </div>
     </div>
   </section>
-  <Image
-    src={`${baseUrl}/images/profile.jpg`}
-    alt="Profile Photo"
-    width={300}
-    height={300}
-    priority
-    className="w-full h-auto rounded-xl shadow-lg transform transition-all duration-300 group-hover:scale-105"
-  />
   <ScrollToTopButton />
 </main>
 </ParallaxSection>

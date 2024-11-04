@@ -1,4 +1,5 @@
-'use client';
+'use client'
+
 import React from 'react';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import Image from 'next/image';

@@ -7,7 +7,7 @@ export async function POST(request: Request) {
   const { name, email, message } = await request.json();
 
   const msg = {
-    to: 'muratorhan@protonmail.com', // Your email address
+    to: 'muratorhan@pm.me', // Your email address
     from: 'muratorhansmail@gmail.com', // Your SendGrid verified sender
     subject: 'New Contact Form Submission',
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,

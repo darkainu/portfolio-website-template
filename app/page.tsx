@@ -62,12 +62,13 @@ const baseUrl = process.env.NODE_ENV === 'production'
                 {/* Enhanced Action Buttons Container */}
                 <div className="flex flex-wrap gap-4 mt-8">
                   <button
-                  className="bg-customGreen text-white px-4 py-2 rounded-md transition-all duration-300 hover:bg-green-500 hover:shadow-lg hover:shadow-customGreen/20 active:transform active:scale-95 hover:scale-105"
+                  className="bg-customGreen text-white px-4 py-2 rounded-md transition-all duration-300 hover:bg-green-500 hover:shadow-lg hover:shadow-customGreen/20 active:transform active:scale-95 hover:scale-105">
+                  </button>
+                  <a
                   href="https://www.upwork.com/freelancers/~01a28d736c9c353891?mp_source=share"
                   target="_blank"
-                  rel="noopener noreferrer">
-                    Hire me
-                  </button>
+                  rel="noopener noreferrer"
+                  > Hire me </a>
                   <a
                     href="/docs/resume.pdf"
                     target="_blank"

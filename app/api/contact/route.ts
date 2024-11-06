@@ -1,14 +1,18 @@
 import { NextResponse } from 'next/server';
 import sgMail from '@sendgrid/mail';
 
+export const config = {
+  runtime: 'nodejs'
+};
+
 export async function POST(request: Request) {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 
   const { name, email, message } = await request.json();
 
   const msg = {
-    to: 'your-verified-email@domain.com',
-    from: 'your-verified-email@domain.com',
+    to: 'muratorhan@pm.me',
+    from: 'muratorhansmail@gmail.com',
     subject: `Portfolio Contact from ${name}`,
     text: `From: ${name}\nEmail: ${email}\nMessage: ${message}`,
     html: `<p><strong>From:</strong> ${name}</p>
@@ -18,8 +22,12 @@ export async function POST(request: Request) {
 
   try {
     await sgMail.send(msg);
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ success: true, message: 'Email sent successfully' });
   } catch (error) {
-    return NextResponse.json({ error: 'Failed to send email' }, { status: 500 });
+    console.error('SendGrid error:', error);
+    return NextResponse.json(
+      { success: false, message: 'Failed to send email' },
+      { status: 500 }
+    );
   }
 }

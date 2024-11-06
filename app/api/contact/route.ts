@@ -1,16 +1,14 @@
 import { NextResponse } from 'next/server';
 import sgMail from '@sendgrid/mail';
 
-export const runtime = 'edge';
-
 export async function POST(request: Request) {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 
   const { name, email, message } = await request.json();
 
   const msg = {
-    to: 'muratorhan@pm.me',
-    from: 'muratorhansmail@gmail.com',
+    to: 'your-verified-email@domain.com',
+    from: 'your-verified-email@domain.com',
     subject: `Portfolio Contact from ${name}`,
     text: `From: ${name}\nEmail: ${email}\nMessage: ${message}`,
     html: `<p><strong>From:</strong> ${name}</p>

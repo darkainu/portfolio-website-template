@@ -3,17 +3,6 @@ import sgMail from '@sendgrid/mail';
 
 export const runtime = 'nodejs';
 
-// Add OPTIONS method to handle CORS preflight
-export async function OPTIONS() {
-  return NextResponse.json({}, {
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'POST',
-      'Access-Control-Allow-Headers': 'Content-Type'
-    }
-  });
-}
-
 export async function POST(request: Request) {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 

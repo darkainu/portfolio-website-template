@@ -37,7 +37,7 @@ const baseUrl = process.env.NODE_ENV === 'production'
               {/* Enhanced Content Container */}
               <div className="w-full md:w-2/3 md:pl-8">
                 <h3 className="text-2xl font-semibold text-white mb-6 border-b border-white/20 pb-2">
-                  Blending IT Support, Business Acumen, and Coding Skills
+                  Blending IT Support, Business Acumen, and Coding
                 </h3>
                 <div className="text-gray-100 space-y-4">
                   <p>

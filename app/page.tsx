@@ -1,14 +1,13 @@
 'use client'
 
 import React from 'react';
-import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Link from 'next/link';
-// Dynamic imports for interactive components
-const ParallaxSection = dynamic(() => import('../components/ParallaxSection'), { ssr: false });
-const MobileMenu = dynamic(() => import('../components/MobileMenu'), { ssr: false });
-const ScrollToTopButton = dynamic(() => import('../components/ScrollToTopButton'), { ssr: false });
-const ContactForm = dynamic(() => import('../components/ContactForm'), { ssr: false });
+import ParallaxSection from '../components/ParallaxSection';
+import MobileMenu from '../components/MobileMenu';
+import ScrollToTopButton from '../components/ScrollToTopButton';
+import ContactForm from '../components/ContactForm';
+
 export default function HomePage(): React.ReactNode {
   return (
       <ParallaxSection>

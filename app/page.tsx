@@ -2,6 +2,11 @@
 
 import React from 'react';
 import ParallaxSection from '@/components/ParallaxSection';
+import MobileMenu from '@/components/MobileMenu';
+import ScrollToTopButton from '@/components/ScrollToTopButton';
+import Image from 'next/image';
+import ContactForm from '@/components/ContactForm';
+import Link from 'next/link';
 
 const baseUrl = process.env.NODE_ENV === 'production'
   ? '/website'

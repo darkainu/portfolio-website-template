@@ -1,10 +1,8 @@
 import { useState, useEffect, useMemo } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
 
 const Header: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>('');
-  
+
   const sections = useMemo(() => ['about-me', 'projects', 'contact'], []);
 
   useEffect(() => {
@@ -24,7 +22,7 @@ const Header: React.FC = () => {
         if (element) {
           const { offsetTop, offsetHeight } = element;
           if (
-            scrollPosition >= offsetTop - 100 && 
+            scrollPosition >= offsetTop - 100 &&
             scrollPosition < offsetTop + offsetHeight - 100
           ) {
             setActiveSection(section);
@@ -36,14 +34,15 @@ const Header: React.FC = () => {
 
     const scrollContainer = document.querySelector('.overflow-y-auto');
     scrollContainer?.addEventListener('scroll', handleScroll);
-    
+
     return () => scrollContainer?.removeEventListener('scroll', handleScroll);
   }, [sections]);
+
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
     e.preventDefault();
     const scrollContainer = document.querySelector('.overflow-y-auto');
     const targetSection = document.getElementById(sectionId);
-    
+
     if (scrollContainer && targetSection) {
       scrollContainer.scrollTo({
         top: targetSection.offsetTop,
@@ -51,6 +50,7 @@ const Header: React.FC = () => {
       });
     }
   };
+
 
   return (
     <nav className="hidden md:block fixed left-8 bottom-20 z-50 xl:left-12 2xl:left-16">
@@ -60,18 +60,8 @@ const Header: React.FC = () => {
             <a
               href={`#${item.toLowerCase().replace(' ', '-')}`}
               onClick={(e) => handleClick(e, item.toLowerCase().replace(' ', '-'))}
-              className={`
-                relative px-4 py-2 rounded-lg
-                ${activeSection === item.toLowerCase().replace(' ', '-')
-                  ? 'bg-white/20 text-white font-semibold backdrop-blur-sm'
-                  : 'text-white/80 hover:text-white hover:bg-white/10'}
-                transition-all duration-300
-                flex items-center gap-2
-                shadow-lg
-                border border-white/20
-              `}
-            >
-              {item}
+              className={`relative group ${activeSection === item.toLowerCase().replace(' ', '-') ? 'text-customGreen' : 'text-gray-600'}`}            >
+              <span id={`nav-${item}`}>{item}</span>
             </a>
           </li>
         ))}

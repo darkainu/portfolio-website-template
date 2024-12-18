@@ -1,22 +1,20 @@
 'use client'
 
 import React from 'react';
-import ParallaxSection from '@/components/ParallaxSection';
-import MobileMenu from '@/components/MobileMenu';
-import ScrollToTopButton from '@/components/ScrollToTopButton';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import ContactForm from '@/components/ContactForm';
 import Link from 'next/link';
 
-const baseUrl = process.env.NODE_ENV === 'production'
-  ? '/website'
-  : '';
+const ParallaxSection = dynamic(() => import('@/components/ParallaxSection'), { ssr: false });
+const MobileMenu = dynamic(() => import('@/components/MobileMenu'), { ssr: false });
+const ScrollToTopButton = dynamic(() => import('@/components/ScrollToTopButton'), { ssr: false });
+const ContactForm = dynamic(() => import('@/components/ContactForm'), { ssr: false });
 
-    export default function HomePage(): React.ReactNode {
-    return (
+export default function HomePage(): React.ReactNode {
+  return (
       <ParallaxSection>
-        <MobileMenu />
-        <main className="flex flex-col items-center justify-start min-h-screen p-5 pt-20 md:ml-32 xl:ml-40">
+          <MobileMenu />
+          <main className="flex flex-col items-center justify-start min-h-screen p-5 pt-20 md:ml-32 xl:ml-40">
           {/* About Me Section */}
           <section id="about-me" className="font-body bg-gradient-to-br from-sky-600/80 to-blue-800/80 backdrop-blur-sm w-full max-w-4xl mx-auto p-8 rounded-xl shadow-2xl mt-10">
             <div className="flex flex-col md:flex-row items-center gap-8">

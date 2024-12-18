@@ -8,8 +8,8 @@ import Link from 'next/link';
 import ParallaxSection from '@/components/ParallaxSection';
 import MobileMenu from '@/components/MobileMenu';
 
-const baseUrl = process.env.NODE_ENV === 'production' 
-  ? '/website' 
+const baseUrl = process.env.NODE_ENV === 'production'
+  ? '/website'
   : '';
 
     export default function HomePage(): React.ReactNode {
@@ -61,9 +61,14 @@ const baseUrl = process.env.NODE_ENV === 'production'
                 </div>
                 {/* Enhanced Action Buttons Container */}
                 <div className="flex flex-wrap gap-4 mt-8">
-                  <button className="bg-customGreen text-white px-4 py-2 rounded-md transition-all duration-300 hover:bg-green-500 hover:shadow-lg hover:shadow-customGreen/20 active:transform active:scale-95 hover:scale-105">
+                  <a
+                    href="https://www.upwork.com/freelancers/~01a28d736c9c353891?mp_source=share"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-customGreen text-white px-4 py-2 rounded-md transition-all duration-300 hover:bg-green-500 hover:shadow-lg hover:shadow-customGreen/20 active:transform active:scale-95 hover:scale-105"
+                  >
                     Hire me
-                  </button>
+                  </a>
                   <a
                     href="/docs/resume.pdf"
                     target="_blank"
@@ -106,16 +111,16 @@ const baseUrl = process.env.NODE_ENV === 'production'
 
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {/* Featured Project Card */}
-      <a 
-        href="https://www.welfareabroad.com" 
-        target="_blank" 
+      <a
+        href="https://www.welfareabroad.com"
+        target="_blank"
         rel="noopener noreferrer"
         className="group bg-white/10 backdrop-blur-sm p-5 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-102 border border-white/20"
       >
         <h3 className="text-xl font-semibold text-white mb-3">Welfare Abroad Website</h3>
         <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden">
           <Image
-            src="images/welfareabroad.webp"
+            src="/images/welfareabroad.webp"
             alt="Welfare Abroad"
             width={300}
             height={300}
@@ -128,21 +133,51 @@ const baseUrl = process.env.NODE_ENV === 'production'
         </p>
       </a>
 
-      {/* Other Project Cards */}
-      {[...Array(4)].map((_, index) => (
-        <div 
-          key={index} 
-          className="group bg-white/10 backdrop-blur-sm p-5 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-102 border border-white/20"
-        >
-          <h3 className="text-xl font-semibold text-white mb-3">Project {index + 2}</h3>
-          <div className="relative w-full h-40 bg-gray-200 mb-4 rounded-lg overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          </div>
-          <p className="text-gray-200 group-hover:text-white transition-colors duration-300">
-            Brief description of the project. This is where you can talk about the project and its features.
-          </p>
+      {/* Media Organizer Project */}
+      <a
+        href="https://github.com/darkainu/media-organizer"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group bg-white/10 backdrop-blur-sm p-5 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-102 border border-white/20"
+      >
+        <h3 className="text-xl font-semibold text-white mb-3">Media Organizer</h3>
+        <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden">
+          <Image
+            src="/images/media-organizer.webp"
+            alt="Media Organizer"
+            width={300}
+            height={300}
+            className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
-      ))}
+        <p className="text-gray-200 group-hover:text-white transition-colors duration-300">
+          A GUI application for organizing media files into Year/Month folders with EXIF data support and cross-platform compatibility.
+        </p>
+      </a>
+
+      {/* Media Organizer Web Project */}
+      <a
+        href="https://github.com/darkainu/media-organizer-web"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group bg-white/10 backdrop-blur-sm p-5 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-102 border border-white/20"
+      >
+        <h3 className="text-xl font-semibold text-white mb-3">Media Organizer Web</h3>
+        <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden">
+          <Image
+            src="/images/media-organizer-web.webp"
+            alt="Media Organizer Web"
+            width={300}
+            height={300}
+            className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        </div>
+        <p className="text-gray-200 group-hover:text-white transition-colors duration-300">
+          Web-based media file organizer with PWA support, smart date detection, and intuitive interface.
+        </p>
+      </a>
     </div>
   </section>
   {/* Contact Section */}
@@ -151,14 +186,14 @@ const baseUrl = process.env.NODE_ENV === 'production'
       {/* Decorative elements */}
       <div className="absolute -top-4 -left-4 w-20 h-20 border-t-2 border-l-2 border-customBlue/20 rounded-tl-xl" />
       <div className="absolute -bottom-4 -right-4 w-20 h-20 border-b-2 border-r-2 border-customBlue/20 rounded-br-xl" />
-    
+
       {/* Content */}
       <h2 className="text-3xl font-bold text-white mb-6 border-b-2 border-white/20 pb-3">
         Let&apos;s Connect
       </h2>
-    
+
       <p className="text-gray-200 mb-8 text-lg">
-        Feel free to reach out if you have any questions or opportunities. I&apos;m always excited to discuss new projects and possibilities.
+        Feel free to reach out if you have any questions or opportunities. I'm always excited to discuss new projects and possibilities.
       </p>
 
       {/* Contact Form with enhanced styling */}

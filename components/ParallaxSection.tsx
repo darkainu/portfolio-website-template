@@ -1,6 +1,5 @@
 'use client'
-
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from 'react';
 
 const ParallaxSection: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -10,7 +9,7 @@ const ParallaxSection: React.FC<{ children: React.ReactNode }> = ({ children }) 
   useEffect(() => {
     const container = containerRef.current;
     setWindowHeight(window.innerHeight);
-    
+
     const handleScroll = (e: Event) => {
       const target = e.target as HTMLDivElement;
       setScrollPosition(target.scrollTop);
@@ -61,7 +60,7 @@ const ParallaxSection: React.FC<{ children: React.ReactNode }> = ({ children }) 
           top: '-10vh'     // Positioning slightly higher
         }}
       />
-      
+
       <div className="relative z-10">
         {children}
       </div>

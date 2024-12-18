@@ -185,11 +185,11 @@ export default function HomePage(): React.ReactNode {
 
             {/* Content */}
             <h2 className="text-3xl font-bold text-white mb-6 border-b-2 border-white/20 pb-3">
-              Let's Connect
+              Let`&apos;`s Connect
             </h2>
 
             <p className="text-gray-200 mb-8 text-lg">
-              Feel free to reach out if you have any questions or opportunities. I'm always excited to discuss new projects and possibilities.
+              Feel free to reach out if you have any questions or opportunities. I`&apos;`m always excited to discuss new projects and possibilities.
             </p>
 
             {/* Contact Form with enhanced styling */}

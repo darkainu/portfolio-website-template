@@ -4,12 +4,11 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Link from 'next/link';
-
-const ParallaxSection = dynamic(() => import('@/components/ParallaxSection'), { ssr: false });
-const MobileMenu = dynamic(() => import('@/components/MobileMenu'), { ssr: false });
-const ScrollToTopButton = dynamic(() => import('@/components/ScrollToTopButton'), { ssr: false });
-const ContactForm = dynamic(() => import('@/components/ContactForm'), { ssr: false });
-
+// Dynamic imports for interactive components
+const ParallaxSection = dynamic(() => import('../components/ParallaxSection'), { ssr: false });
+const MobileMenu = dynamic(() => import('../components/MobileMenu'), { ssr: false });
+const ScrollToTopButton = dynamic(() => import('../components/ScrollToTopButton'), { ssr: false });
+const ContactForm = dynamic(() => import('../components/ContactForm'), { ssr: false });
 export default function HomePage(): React.ReactNode {
   return (
       <ParallaxSection>

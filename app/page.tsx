@@ -1,12 +1,7 @@
 'use client'
 
 import React from 'react';
-import ScrollToTopButton from '@/components/ScrollToTopButton';
-import Image from 'next/image';
-import ContactForm from '@/components/ContactForm';
-import Link from 'next/link';
 import ParallaxSection from '@/components/ParallaxSection';
-import MobileMenu from '@/components/MobileMenu';
 
 const baseUrl = process.env.NODE_ENV === 'production'
   ? '/website'

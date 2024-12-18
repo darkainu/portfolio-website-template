@@ -3,10 +3,24 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import ParallaxSection from '../components/ParallaxSection';
-import MobileMenu from '../components/MobileMenu';
-import ScrollToTopButton from '../components/ScrollToTopButton';
-import ContactForm from '../components/ContactForm';
+import dynamic from 'next/dynamic';
+
+const ParallaxSection = dynamic(() => import('@/components/ParallaxSection'), {
+  ssr: false,
+  loading: () => <div>Loading...</div>
+});
+
+const MobileMenu = dynamic(() => import('@/components/MobileMenu'), {
+  ssr: false
+});
+
+const ScrollToTopButton = dynamic(() => import('@/components/ScrollToTopButton'), {
+  ssr: false
+});
+
+const ContactForm = dynamic(() => import('@/components/ContactForm'), {
+  ssr: false
+});
 
 export default function HomePage(): React.ReactNode {
   return (

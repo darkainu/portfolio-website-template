@@ -5,22 +5,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 
-const ParallaxSection = dynamic(() => import('@/components/ParallaxSection'), {
-  ssr: false,
-  loading: () => <div>Loading...</div>
-});
+// Import ParallaxSection with proper type casting
+const ParallaxSection = dynamic<{ children: React.ReactNode }>(() =>
+  import('@/components/ParallaxSection').then((mod) => mod.default),
+  { ssr: false }
+);
 
-const MobileMenu = dynamic(() => import('@/components/MobileMenu'), {
-  ssr: false
-});
-
-const ScrollToTopButton = dynamic(() => import('@/components/ScrollToTopButton'), {
-  ssr: false
-});
-
-const ContactForm = dynamic(() => import('@/components/ContactForm'), {
-  ssr: false
-});
+const MobileMenu = dynamic(() => import('@/components/MobileMenu'), { ssr: false });
+const ScrollToTopButton = dynamic(() => import('@/components/ScrollToTopButton'), { ssr: false });
+const ContactForm = dynamic(() => import('@/components/ContactForm'), { ssr: false });
 
 export default function HomePage(): React.ReactNode {
   return (

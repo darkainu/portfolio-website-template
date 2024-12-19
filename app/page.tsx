@@ -101,7 +101,7 @@ export default function HomePage(): React.ReactNode {
         {/* Projects Section */}
         <section id="projects" className="font-body bg-gradient-to-br from-indigo-600/80 to-purple-800/80 backdrop-blur-sm w-full max-w-4xl mx-auto p-8 rounded-xl shadow-2xl mt-10 mb-32">
           <h2 className="text-3xl font-bold text-white mb-8 border-b-2 border-white/20 pb-3">
-            Featured Projects
+            Recent Projects
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

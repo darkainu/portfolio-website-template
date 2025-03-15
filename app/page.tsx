@@ -184,7 +184,7 @@ export default function HomePage(): React.ReactNode {
               <h3 className="text-xl font-semibold text-white mb-3">Note Generator</h3>
               <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/note_generator.webp"
+                  src="/images/notegenerator.webp"
                   alt="Note Generator"
                   width={300}
                   height={300}

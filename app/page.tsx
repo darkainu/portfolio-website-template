@@ -173,6 +173,29 @@ export default function HomePage(): React.ReactNode {
                 Web-based media file organizer with PWA support, smart date detection, and intuitive interface.
               </p>
             </a>
+
+            {/* Note Generator Project */}
+            <a
+              href="https://github.com/darkainu/note_generator"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-white/10 backdrop-blur-sm p-5 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-102 border border-white/20"
+            >
+              <h3 className="text-xl font-semibold text-white mb-3">Note Generator</h3>
+              <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden">
+                <Image
+                  src="/images/note_generator.webp"
+                  alt="Note Generator"
+                  width={300}
+                  height={300}
+                  className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+              <p className="text-gray-200 group-hover:text-white transition-colors duration-300">
+                A tool for generating notes with markdown support, built with React and Node.js.
+              </p>
+            </a>
           </div>
         </section>
         {/* Contact Section */}

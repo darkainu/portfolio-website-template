@@ -193,8 +193,7 @@ export default function HomePage(): React.ReactNode {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
               <p className="text-gray-200 group-hover:text-white transition-colors duration-300">
-                A tool for generating notes with markdown support, built with React and Node.js.
-              </p>
+                Client-side web app using vanilla HTML, CSS, and JavaScript </p>
             </a>
           </div>
         </section>

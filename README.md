@@ -17,8 +17,6 @@ Tailwind CSS
 React
 Vercel (Deployment)
 
-live site https://www.morhan.dev
-
 🏃‍♂️ Running Locally
 Clone the repository git clone [your-repo-url]
 

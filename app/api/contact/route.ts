@@ -9,8 +9,8 @@ export async function POST(request: Request) {
   const { name, email, message } = await request.json();
 
   const msg = {
-    to: 'muratorhan@pm.me',
-    from: 'muratorhansmail@gmail.com',
+    to: 'email@email.com',
+    from: 'email@email.com',
     subject: `Portfolio Contact from ${name}`,
     text: `From: ${name}\nEmail: ${email}\nMessage: ${message}`,
     html: `<p><strong>From:</strong> ${name}</p>

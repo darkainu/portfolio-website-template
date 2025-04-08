@@ -32,26 +32,26 @@ export default function HomePage(): React.ReactNode {
             {/* Enhanced Content Container */}
             <div className="w-full md:w-2/3 md:pl-8">
               <h3 className="text-2xl font-semibold text-white mb-6 border-b border-white/20 pb-2">
-                Blending IT Support, Business Acumen, and Coding
+              loremipsum
               </h3>
               <div className="text-gray-100 space-y-4">
                 <p>
-                  My career journey has been a unique blend of technology and entrepreneurship:
+                loremipsum:
                 </p>
                 <ul className="list-disc list-inside pl-4 space-y-2">
-                  <li>Provided top-notch technical support at Apple</li>
-                  <li>Co-founded companies in medical travel and supplement industries</li>
-                  <li>Built websites and custom CRM systems</li>
-                  <li>Developed end-to-end solutions to enhance customer experience</li>
+                  <li>loremipsum</li>
+                  <li>loremipsum</li>
+                  <li>loremipsum</li>
+                  <li>loremipsum</li>
                 </ul>
                 <p>
-                  This diverse experience has honed my skills in IT, customer service, and business management.
+                loremipsum
                 </p>
                 <p>
-                  Recently, I completed a post-baccalaureate degree in Computer Science, adding a range of programming languages and frameworks to my toolkit.
+                loremipsum
                 </p>
                 <p>
-                  I am excited to bring my unique blend of skills to a tech-focused role where I can bridge the gap between business needs and technical implementation.
+                loremipsum
                 </p>
               </div>
               {/* Enhanced Action Buttons Container */}
@@ -107,7 +107,7 @@ export default function HomePage(): React.ReactNode {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Featured Project Card */}
             <a
-              href="https://www.welfareabroad.com"
+              href="https://www.google.com"
               target="_blank"
               rel="noopener noreferrer"
               className="group bg-white/10 backdrop-blur-sm p-5 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-102 border border-white/20"
@@ -115,8 +115,8 @@ export default function HomePage(): React.ReactNode {
               <h3 className="text-xl font-semibold text-white mb-3">Welfare Abroad Website</h3>
               <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/welfareabroad.webp"
-                  alt="Welfare Abroad"
+                  src="/images/"
+                  alt="loremipsum"
                   width={300}
                   height={300}
                   className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"
@@ -124,22 +124,22 @@ export default function HomePage(): React.ReactNode {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
               <p className="text-gray-200 group-hover:text-white transition-colors duration-300">
-                Built with Typescript, Next.js, Tailwind CSS, Vercel and Hygraph
+              loremipsum
               </p>
             </a>
 
             {/* Media Organizer Project */}
             <a
-              href="https://github.com/darkainu/media-organizer"
+              href="https://github.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="group bg-white/10 backdrop-blur-sm p-5 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-102 border border-white/20"
             >
-              <h3 className="text-xl font-semibold text-white mb-3">Media Organizer</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">loremipsum</h3>
               <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/media-organizer.webp"
-                  alt="Media Organizer"
+                  src="/images/"
+                  alt="loremipsum"
                   width={300}
                   height={300}
                   className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"
@@ -147,22 +147,22 @@ export default function HomePage(): React.ReactNode {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
               <p className="text-gray-200 group-hover:text-white transition-colors duration-300">
-                A GUI application for organizing media files into Year/Month folders with EXIF data support and cross-platform compatibility.
+              loremipsum
               </p>
             </a>
 
             {/* Media Organizer Web Project */}
             <a
-              href="https://github.com/darkainu/media-organizer-web"
+              href="https://github.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="group bg-white/10 backdrop-blur-sm p-5 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-102 border border-white/20"
             >
-              <h3 className="text-xl font-semibold text-white mb-3">Media Organizer Web</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">loremipsum</h3>
               <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/media-organizer-web.webp"
-                  alt="Media Organizer Web"
+                  src="/images/"
+                  alt="loremipsum"
                   width={300}
                   height={300}
                   className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"
@@ -170,7 +170,7 @@ export default function HomePage(): React.ReactNode {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
               <p className="text-gray-200 group-hover:text-white transition-colors duration-300">
-                Web-based media file organizer with PWA support, smart date detection, and intuitive interface.
+              loremipsum
               </p>
             </a>
 
@@ -193,7 +193,7 @@ export default function HomePage(): React.ReactNode {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
               <p className="text-gray-200 group-hover:text-white transition-colors duration-300">
-                Client-side web app using vanilla HTML, CSS, and JavaScript </p>
+              loremipsum </p>
             </a>
           </div>
         </section>

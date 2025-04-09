@@ -79,7 +79,7 @@ export default function HomePage(): React.ReactNode {
                   Career & Life
                 </Link>
                 <a
-                  href="https://www.linkedin.com/in/muratorhan/"
+                  href="https://www.linkedin.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-[#0077B5] text-white px-4 py-2 rounded-md transition-all duration-300 hover:bg-[#006699] hover:shadow-lg active:scale-100 hover:scale-105 inline-block"
@@ -87,7 +87,7 @@ export default function HomePage(): React.ReactNode {
                   LinkedIn
                 </a>
                 <a
-                  href="https://github.com/darkainu"
+                  href="https://github.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-[#333] text-white px-4 py-2 rounded-md transition-all duration-300 hover:bg-[#24292e] hover:shadow-lg active:scale-100 hover:scale-105 inline-block"
@@ -112,7 +112,7 @@ export default function HomePage(): React.ReactNode {
               rel="noopener noreferrer"
               className="group bg-white/10 backdrop-blur-sm p-5 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-102 border border-white/20"
             >
-              <h3 className="text-xl font-semibold text-white mb-3">Welfare Abroad Website</h3>
+              <h3 className="text-xl font-semibold text-white mb-3"> asdasd</h3>
               <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden">
                 <Image
                   src="/images/"
@@ -181,7 +181,7 @@ export default function HomePage(): React.ReactNode {
               rel="noopener noreferrer"
               className="group bg-white/10 backdrop-blur-sm p-5 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-102 border border-white/20"
             >
-              <h3 className="text-xl font-semibold text-white mb-3">Note Generator</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">Xasdqes</h3>
               <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden">
                 <Image
                   src="/images/notegenerator.webp"
